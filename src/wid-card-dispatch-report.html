@@ -34,6 +34,49 @@ Example:
       paper-material {
         overflow-y: auto;
         height: 100%;
+        background-color: #fff;
+      }
+
+      #header {
+        background-color: #01579b;
+        color: #fff;
+      }
+
+      #header .icons {
+        background-color: #1b68a5;
+      }
+      
+      #header .odd {
+        background-color: #1b68a5;
+      }
+
+      #header .odd .icons {
+        background-color: #3378ae;
+      }
+
+      .person-column {
+        background-color: #81d4fa;
+      }
+
+      .person-month {
+        border-bottom: solid thin gray;
+        background-color: #fff;
+      }
+
+      .odd {
+        background-color: #29b6f6;
+      }
+
+      .odd .person-month  {
+        background-color: #eaeaea;
+      }      
+
+      .person-name {
+        background-color: #cccccc;
+      }
+
+      .odd .person-name {
+        background-color: #bbbbbb;
       }
     </style>
 
@@ -47,6 +90,270 @@ Example:
     </div>
 
     <paper-material class="layout horizontal flex" elevation="3">
+      <div id="header" class="layout vertical flex">
+        <div class="flex"></div>
+        <div class="flex layout horizontal odd">
+          <div class="flex-2 layout vertical center-center">[[_monthAbbrev(monthNames.m_1)]]</div>
+          <div class="flex layout vertical icons">
+            <div class="flex layout vertical center-center">
+              <iron-icon src="schedProb.svg"></iron-icon>
+            </div>
+            <div class="flex layout vertical center-center">
+              <iron-icon src="resched.svg"></iron-icon>
+            </div>
+            <div class="flex layout vertical center-center">
+              <iron-icon src="issue.svg"></iron-icon>
+            </div>
+          </div>
+        </div>
+        <div class="flex layout horizontal">
+          <div class="flex-2 layout vertical center-center">[[_monthAbbrev(monthNames.m_2)]]</div>
+          <div class="flex layout vertical icons">
+            <div class="flex layout vertical center-center">
+              <iron-icon src="schedProb.svg"></iron-icon>
+            </div>
+            <div class="flex layout vertical center-center">
+              <iron-icon src="resched.svg"></iron-icon>
+            </div>
+            <div class="flex layout vertical center-center">
+              <iron-icon src="issue.svg"></iron-icon>
+            </div>
+          </div>
+        </div>
+        <div class="flex layout horizontal odd">
+          <div class="flex-2 layout vertical center-center">[[_monthAbbrev(monthNames.m_3)]]</div>
+          <div class="flex layout vertical icons">
+            <div class="flex layout vertical center-center">
+              <iron-icon src="schedProb.svg"></iron-icon>
+            </div>
+            <div class="flex layout vertical center-center">
+              <iron-icon src="resched.svg"></iron-icon>
+            </div>
+            <div class="flex layout vertical center-center">
+              <iron-icon src="issue.svg"></iron-icon>
+            </div>
+          </div>          
+        </div>
+      </div>
+      <div class="flex person-column layout vertical">
+        <div class="person-header layout vertical flex ">
+          <div class="person-avatar flex-3"></div>
+          <div class="person-name flex layout vertical center-center">[[person01.name]]</div>
+        </div>
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person01.apt_issues.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person01.efficiency_rescheduling.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person01.missed_inspection.month_1]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person01.apt_issues.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person01.efficiency_rescheduling.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person01.missed_inspection.month_2]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person01.apt_issues.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person01.efficiency_rescheduling.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person01.missed_inspection.month_3]]</div>
+        </div>      
+      </div>
+
+      <div class="flex person-column layout vertical odd">
+        <div class="person-header layout vertical flex ">
+          <div class="person-avatar flex-3"><iron-icon></iron-icon></div>
+          <div class="person-name flex layout vertical center-center">[[person02.name]]</div>
+        </div>
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person02.apt_issues.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person02.efficiency_rescheduling.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person02.missed_inspection.month_1]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person02.apt_issues.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person02.efficiency_rescheduling.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person02.missed_inspection.month_2]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person02.apt_issues.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person02.efficiency_rescheduling.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person02.missed_inspection.month_3]]</div>
+        </div>      
+      </div>
+
+      <div class="flex person-column layout vertical">
+        <div class="person-header layout vertical flex ">
+          <div class="person-avatar flex-3"><iron-icon></iron-icon></div>
+          <div class="person-name flex layout vertical center-center">[[person03.name]]</div>
+        </div>
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person03.apt_issues.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person03.efficiency_rescheduling.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person03.missed_inspection.month_1]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person03.apt_issues.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person03.efficiency_rescheduling.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person03.missed_inspection.month_2]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person03.apt_issues.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person03.efficiency_rescheduling.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person03.missed_inspection.month_3]]</div>
+        </div>      
+      </div>
+
+      <div class="flex person-column layout vertical odd">
+        <div class="person-header layout vertical flex ">
+          <div class="person-avatar flex-3"><iron-icon></iron-icon></div>
+          <div class="person-name flex layout vertical center-center">[[person04.name]]</div>
+        </div>
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person04.apt_issues.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person04.efficiency_rescheduling.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person04.missed_inspection.month_1]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person04.apt_issues.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person04.efficiency_rescheduling.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person04.missed_inspection.month_2]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person04.apt_issues.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person04.efficiency_rescheduling.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person04.missed_inspection.month_3]]</div>
+        </div>      
+      </div>
+
+      <div class="flex person-column layout vertical">
+        <div class="person-header layout vertical flex ">
+          <div class="person-avatar flex-3"><iron-icon></iron-icon></div>
+          <div class="person-name flex layout vertical center-center">[[person05.name]]</div>
+        </div>
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person05.apt_issues.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person05.efficiency_rescheduling.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person05.missed_inspection.month_1]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person05.apt_issues.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person05.efficiency_rescheduling.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person05.missed_inspection.month_2]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person05.apt_issues.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person05.efficiency_rescheduling.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person05.missed_inspection.month_3]]</div>
+        </div>      
+      </div>
+
+      <div class="flex person-column layout vertical odd">
+        <div class="person-header layout vertical flex ">
+          <div class="person-avatar flex-3"><iron-icon></iron-icon></div>
+          <div class="person-name flex layout vertical center-center">[[person06.name]]</div>
+        </div>
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person06.apt_issues.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person06.efficiency_rescheduling.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person06.missed_inspection.month_1]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person06.apt_issues.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person06.efficiency_rescheduling.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person06.missed_inspection.month_2]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person06.apt_issues.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person06.efficiency_rescheduling.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person06.missed_inspection.month_3]]</div>
+        </div>      
+      </div>
+
+      <div class="flex person-column layout vertical">
+        <div class="person-header layout vertical flex ">
+          <div class="person-avatar flex-3"><iron-icon></iron-icon></div>
+          <div class="person-name flex layout vertical center-center">[[person07.name]]</div>
+        </div>
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person07.apt_issues.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person07.efficiency_rescheduling.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person07.missed_inspection.month_1]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person07.apt_issues.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person07.efficiency_rescheduling.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person07.missed_inspection.month_2]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person07.apt_issues.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person07.efficiency_rescheduling.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person07.missed_inspection.month_3]]</div>
+        </div>      
+      </div>
+
+      <div class="flex person-column layout vertical odd">
+        <div class="person-header layout vertical flex ">
+          <div class="person-avatar flex-3"><iron-icon></iron-icon></div>
+          <div class="person-name flex layout vertical center-center">[[person08.name]]</div>
+        </div>
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person08.apt_issues.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person08.efficiency_rescheduling.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person08.missed_inspection.month_1]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person08.apt_issues.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person08.efficiency_rescheduling.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person08.missed_inspection.month_2]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person08.apt_issues.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person08.efficiency_rescheduling.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person08.missed_inspection.month_3]]</div>
+        </div>      
+      </div>
+
+      <div class="flex person-column layout vertical">
+        <div class="person-header layout vertical flex ">
+          <div class="person-avatar flex-3"><iron-icon></iron-icon></div>
+          <div class="person-name flex layout vertical center-center">[[person09.name]]</div>
+        </div>
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person09.apt_issues.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person09.efficiency_rescheduling.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person09.missed_inspection.month_1]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person09.apt_issues.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person09.efficiency_rescheduling.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person09.missed_inspection.month_2]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person09.apt_issues.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person09.efficiency_rescheduling.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person09.missed_inspection.month_3]]</div>
+        </div>      
+      </div>
+
+      <div class="flex person-column layout vertical odd">
+        <div class="person-header layout vertical flex ">
+          <div class="person-avatar flex-3"><iron-icon></iron-icon></div>
+          <div class="person-name flex layout vertical center-center">[[person10.name]]</div>
+        </div>
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person10.apt_issues.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person10.efficiency_rescheduling.month_1]]</div>
+          <div class="flex layout vertical center-center">[[person10.missed_inspection.month_1]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person10.apt_issues.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person10.efficiency_rescheduling.month_2]]</div>
+          <div class="flex layout vertical center-center">[[person10.missed_inspection.month_2]]</div>
+        </div>      
+        <div class="person-month flex-2 layout vertical">
+          <div class="flex layout vertical center-center">[[person10.apt_issues.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person10.efficiency_rescheduling.month_3]]</div>
+          <div class="flex layout vertical center-center">[[person10.missed_inspection.month_3]]</div>
+        </div>      
+      </div>
 
     </paper-material>
 
@@ -65,7 +372,111 @@ Example:
       behaviors: [Polymer.WidCardStandardBehavior, Polymer.WidCardWeightBehavior, Polymer.WidCardSubscriptionsBehavior],
 
       properties: {
+        /**
+         * name
+         * @type {String}
+         */
+        name: {
+          type: String
+        },
 
+        /**
+         * month_names
+         * @type {Object}
+         */
+        monthNames: {
+          type: Object
+        },
+
+        /**
+         * person01
+         * @type {Object}
+         */
+        person01: {
+          type: Object
+        },
+
+        /**
+         * person02
+         * @type {Object}
+         */
+        person02: {
+          type: Object
+        },
+
+        /**
+         * person03
+         * @type {Object}
+         */
+        person03: {
+          type: Object
+        },
+
+        /**
+         * person04
+         * @type {Object}
+         */
+        person04: {
+          type: Object
+        },
+
+        /**
+         * person05
+         * @type {Object}
+         */
+        person05: {
+          type: Object
+        },
+
+        /**
+         * person06
+         * @type {Object}
+         */
+        person06: {
+          type: Object
+        },
+
+        /**
+         * person07
+         * @type {Object}
+         */
+        person07: {
+          type: Object
+        },
+
+        /**
+         * person08
+         * @type {Object}
+         */
+        person08: {
+          type: Object
+        },
+
+        /**
+         * person09
+         * @type {Object}
+         */
+        person09: {
+          type: Object
+        },
+
+        /**
+         * person10
+         * @type {Object}
+         */
+        person10: {
+          type: Object
+        }      
+
+      },
+
+      _monthAbbrev: function(month) {
+        if(month.length > 4) {
+          return month.substr(0,3);
+        }
+        else {
+          return month;
+        }
       }
 
     });
